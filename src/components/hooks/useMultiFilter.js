@@ -1,7 +1,6 @@
 const useMultiFilter = (contactData, value) => {
   const multiFilter = contactData.filter((contact) => {
-    return Object.keys(contact).some((key) => {
-      console.log('KEYS', key, 'contact[key]', contact[key]);
+    return Object.keys(contact).some((key) => {      
       return contact[key]
         .toString()
         .toLowerCase()
