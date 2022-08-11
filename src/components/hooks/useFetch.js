@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 const useFetch = () => {
   const [contacts, setContacts] = useState([]);
 
-
   useEffect(() => {
     const URL = "https://jsonplaceholder.typicode.com/users";
 

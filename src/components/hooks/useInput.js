@@ -7,7 +7,7 @@ const useInput = (values) => {
       errorMessage: "Should contain 7 Characters ",
       label: "Email",
       required: true,
-    //   pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{7,})",
+      pattern: `/^([a-z\d][a-z\d_\-.]+[a-z\d]){2,10}@[a-z\d-]{2,30}\.[a-z]{2,10}(\.[a-z]{2,20})?$/`,
     },
     {
       name: "password",
@@ -16,7 +16,7 @@ const useInput = (values) => {
       errorMessage: "Should contain 8 Characters",
       label: "Password",
       required: true,
-    //   pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})",
+      pattern: `^[A-Za-z0-9]{8,}$`,
     },
   ];
   return [inputData];

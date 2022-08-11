@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import FormInput from "../form/FormInput";
 import useInput from "../hooks/useInput";
 
-const RenderForm = () => {
-  const [show, setShow] = useState(true);
+const RenderForm = (props) => {
+  const { setFormValues, formValues } = props;
+  const [display, setDisplay] = useState(false);
   const [values, setValues] = useState({
-    username: "",
     password: "",
     email: "",
   });
-  const [display, setDisplay] = useState(false);
+console.log('State:', formValues)
   const [inputData] = useInput();
 
   const handleChange = (e) => {
@@ -19,14 +19,8 @@ const RenderForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    setValues({
-      username: "",
-      email: "",
-      birthday: "",
-      password: "",
-      confirmPassword: "",
-    });
+    setFormValues([...formValues, values]);
+    setValues({ email: "", password: "" });
     setDisplay(false);
   };
 
@@ -46,9 +40,7 @@ const RenderForm = () => {
             />
           );
         })}
-        <button type="click" onClick={() => setShow(!show)}>
-          Continue
-        </button>
+        <button className="form-btn" type="click">Submit</button>
       </form>
     </div>
   );

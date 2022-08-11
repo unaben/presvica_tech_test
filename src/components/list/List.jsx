@@ -3,7 +3,7 @@ import TableBody from "../tableBody/TableBody";
 import TableHead from "../tableHead/TableHead";
 
 const List = (props) => {
-  const { setSelectedName, selectedName, handleDelete, multiFilter } = props;
+  const { setSelectedName, selectedName, handleDelete, multiFilter, formValues } = props;
   return (
     <div className="container">
       <div className="mb-3 d-flex ">
@@ -18,8 +18,8 @@ const List = (props) => {
         />
       </div>
       <table className="table table-bordered rounded">
-        <TableHead />
-        <TableBody handleDelete={handleDelete} multiFilter={multiFilter} />
+        <TableHead formValues={formValues} />
+        <TableBody handleDelete={handleDelete} multiFilter={multiFilter} formValues={formValues} />
       </table>
     </div>
   );

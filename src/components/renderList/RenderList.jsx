@@ -3,7 +3,7 @@ import useFetch from "../hooks/useFetch";
 import useMultiFilter from "../hooks/useMultiFilter";
 import List from "../list/List";
 
-const RenderList = () => {
+const RenderList = ({ formValues }) => {
   const [contacts, setContacts] = useFetch();
   const [selectedName, setSelectedName] = useState("");
   const [multiFilter] = useMultiFilter(contacts, selectedName);
@@ -20,6 +20,7 @@ const RenderList = () => {
       handleDelete={handleDelete}
       contacts={contacts}
       multiFilter={multiFilter}
+      formValues={formValues}
     />
   );
 };
