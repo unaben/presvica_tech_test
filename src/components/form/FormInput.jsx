@@ -10,7 +10,7 @@ const FormInput = (props) => {
     ...inputProps
   } = props;
   return (
-    <div className="input-container d-flex flex-column mb-3 ">
+    <div className=" d-flex flex-column mb-3 ">
       <label>{label}</label>
       <input
         {...inputProps}

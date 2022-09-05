@@ -1,0 +1,33 @@
+header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 5rem;
+  background-color: steelblue;
+  color: white;
+}
+
+.link {
+  display: flex;
+  /* justify-content: space-evenly;   */
+  padding: 0 20px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.link li {
+  color: white;
+  list-style: none;
+  margin: 20px;
+  font-size: 1.1em;
+}
+
+.link a {
+  text-decoration: none;
+}
+
+.link li:hover {
+  color: wheat;
+}

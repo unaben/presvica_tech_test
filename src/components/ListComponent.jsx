@@ -1,9 +1,16 @@
 import React from "react";
-import TableBody from "../tableBody/TableBody";
-import TableHead from "../tableHead/TableHead";
+import TableBody from "./TableBody";
+import TableHead from "./TableHead";
 
-const List = (props) => {
-  const { setSelectedName, selectedName, handleDelete, multiFilter, formValues } = props;
+const ListComponent = (props) => {
+  const {
+    setSelectedName,
+    selectedName,
+    handleDelete,
+    multiFilter,
+    formValues,
+    SelectedUserDetails,
+  } = props;
   return (
     <div className="container">
       <div className="mb-3 d-flex ">
@@ -19,10 +26,15 @@ const List = (props) => {
       </div>
       <table className="table table-bordered rounded">
         <TableHead formValues={formValues} />
-        <TableBody handleDelete={handleDelete} multiFilter={multiFilter} formValues={formValues} />
+        <TableBody
+          handleDelete={handleDelete}
+          multiFilter={multiFilter}
+          formValues={formValues}
+          SelectedUserDetails={SelectedUserDetails}
+        />
       </table>
     </div>
   );
 };
 
-export default List;
+export default ListComponent;

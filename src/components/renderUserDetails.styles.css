@@ -1,0 +1,21 @@
+.note {
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 20px;
+  max-width: 500px;
+  margin: 16px;
+  height: fit-content;
+}
+
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* .note h1 {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+} */
