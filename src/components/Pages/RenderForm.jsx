@@ -4,7 +4,9 @@ import useInput from "../hooks/useInput";
 import { useNavigate } from "react-router-dom";
 
 const RenderForm = (props) => {
-  const { setFormValues, formValues } = props;
+  const { setFormValues } = props;
+ 
+
   const [display, setDisplay] = useState(false);
   const [values, setValues] = useState({
     password: "",
@@ -14,14 +16,21 @@ const RenderForm = (props) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setValues({ ...values, [name]: value });
+    setValues((prevValue) => {
+      return {
+        ...prevValue,
+        [name]: value,
+      };
+    });
   };
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormValues([...formValues, values]);
+    setFormValues((prevValue) => {
+      return [...prevValue, values];
+    });
     setValues({ email: "", password: "" });
     setDisplay(false);
     navigate("/table");

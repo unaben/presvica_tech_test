@@ -18,12 +18,7 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={
-              <RenderForm
-                setFormValues={setFormValues}
-                formValues={formValues}
-              />
-            }
+            element={<RenderForm setFormValues={setFormValues} />}
           />
           <Route
             path="/table"

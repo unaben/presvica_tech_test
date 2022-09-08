@@ -17,7 +17,7 @@ const ListComponent = (props) => {
         <input
           type="text"
           id="items"
-          placeholder="Enter name to filter..."
+          placeholder="Enter details to filter..."
           value={selectedName}
           onChange={(e) => {
             setSelectedName(e.target.value);
