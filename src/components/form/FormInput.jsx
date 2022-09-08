@@ -1,5 +1,5 @@
 import React from "react";
-import './formInput.css'
+import "./formInput.css";
 const FormInput = (props) => {
   const {
     display,
@@ -10,17 +10,19 @@ const FormInput = (props) => {
     ...inputProps
   } = props;
   return (
-    <div className=" d-flex flex-column mb-3 ">
-      <label>{label}</label>
+    <div className="mb-3 ">
+      <label htmlFor="password" className="form-label">
+        {label}
+      </label>
       <input
         {...inputProps}
+        type="text"
         onChange={handleChange}
         onBlur={() => setDisplay(true)}
-        onFocus={() =>
-          inputProps.name === "password" && setDisplay(true)
-        }
+        onFocus={() => inputProps.name === "password" && setDisplay(true)}
         focus={display.toString()}
-      />
+        className="form-control mb-3"
+      />     
       <span>{errorMessage}</span>
     </div>
   );

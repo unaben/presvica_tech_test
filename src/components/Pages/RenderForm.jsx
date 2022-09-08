@@ -28,22 +28,14 @@ const RenderForm = (props) => {
   };
 
   return (
-    <div
-      className="p-3"
-      style={{
-        margin: "20px auto",
-      }}
-    >
+    <div className="container p-3">
       <form
         onSubmit={handleSubmit}
-        noValidate
-        className="border shadow p-3"
-        style={{
-          width: "800px",
-          height: "500px",
-        }}
+        // noValidate
+        className="border shadow p-3 mx-auto mt-5"
+        style={{ maxWidth: "600px" }}
       >
-        <h1>Register</h1>
+        <h1>Login Form</h1>
         {inputData.map((data, index) => {
           return (
             <FormInput
@@ -56,7 +48,7 @@ const RenderForm = (props) => {
             />
           );
         })}
-        <button className="form-btn" type="submit">
+        <button className="form-btn mb-4" type="submit">
           Submit
         </button>
       </form>

@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 
 const TableBody = (props) => {
   const { multiFilter, handleDelete, formValues, SelectedUserDetails } = props;
-  
+
   return (
     <>
       {multiFilter.map((user, index) => (
@@ -17,13 +17,14 @@ const TableBody = (props) => {
             <td>
               <Button
                 variant="outline-primary"
-                className="mx-2"
+                className="m-3 p-2"
                 onClick={() => SelectedUserDetails(user)}
               >
                 Details
               </Button>
               <Button
                 variant="outline-danger"
+                className=" p-2"
                 type="click"
                 onClick={() => handleDelete(user.id)}
               >

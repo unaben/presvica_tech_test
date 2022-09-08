@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 input {
   padding: 5px;
   border-radius: 8px;
