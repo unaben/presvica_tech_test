@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useFetch from "../hooks/useFetch";
 import useMultiFilter from "../hooks/useMultiFilter";
-import ListComponent from "../ListComponent";
+import ListComponent from "./ListComponent";
 import { useNavigate } from "react-router-dom";
 
 const RenderList = ({ formValues, setUserInfo }) => {

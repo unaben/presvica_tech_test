@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import RenderForm from "./components/Pages/RenderForm";
-import RenderList from "./components/Pages/RenderList";
+import RenderForm from "./components/RenderForm";
+import RenderList from "./components/RenderList";
 import { Routes, Route } from "react-router-dom";
-import RenderUserDetails from "./components/Pages/RenderUserDetails";
+import RenderUserDetails from "./components/RenderUserDetails/RenderUserDetails";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
@@ -18,12 +18,7 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={
-              <RenderForm
-                setFormValues={setFormValues}
-                formValues={formValues}
-              />
-            }
+            element={<RenderForm setFormValues={setFormValues} />}
           />
           <Route
             path="/table"

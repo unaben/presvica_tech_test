@@ -5,7 +5,7 @@ header {
   justify-content: space-between;
   width: 100vw;
   height: 5rem;
-  background-color: steelblue;
+  background-color: #4682b4;
   color: white;
 }
 
@@ -30,4 +30,10 @@ header {
 
 .link li:hover {
   color: wheat;
+}
+
+img {
+  height: 60px;
+  max-width: 100px;
+  padding: 10px;
 }
