@@ -31,3 +31,9 @@ header {
 .link li:hover {
   color: wheat;
 }
+
+img {
+  height: 60px;
+  max-width: 100px;
+  padding: 10px;
+}

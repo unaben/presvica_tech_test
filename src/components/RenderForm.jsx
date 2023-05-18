@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import FormInput from "../form/FormInput";
+import FormInput from "./form/FormInput";
 import useInput from "../hooks/useInput";
 import { useNavigate } from "react-router-dom";
 
 const RenderForm = (props) => {
   const { setFormValues } = props;
- 
 
   const [display, setDisplay] = useState(false);
   const [values, setValues] = useState({

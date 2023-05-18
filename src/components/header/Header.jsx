@@ -1,10 +1,9 @@
 import React from "react";
-import "./header.styles.css";
+import "./header.css";
 import { Link } from "react-router-dom";
-import img from "../image/tech-logo.png";
 const Header = () => {
   return (
-    <header>
+    <header style={{ position: "sticky", top: 0 }}>
       <div
         className="d-flex justify-content-center"
         style={{
@@ -13,11 +12,7 @@ const Header = () => {
           alignItems: "self-end",
         }}
       >
-        <img
-          src={img}
-          alt="tech-img"
-          style={{ height: "60px", maxWidth: "100px", padding: "10px" }}
-        />
+        <img src="/image/tech-logo.png" alt="tech-img" />
         <div>
           <p>Preservica Tech Test</p>
         </div>
